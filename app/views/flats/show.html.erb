@@ -1,0 +1,12 @@
+<h2><%= @flat.name %></h2>
+<p><%= @flat.address %></p>
+<br>
+<h4>A bit more about this flat...</h4>
+<p><%= @flat.description %></p>
+<br>
+<h4>Details</h4>
+<p><%= @flat.number_of_guests %></p>
+<p><%= @flat.price_per_night %></p>
+
+<%= link_to "Edit this flat", edit_flat_path, class: "btn btn-warning"%>
+<%= link_to "Back to other Flats", flats_path, class: "btn btn-primary"%>

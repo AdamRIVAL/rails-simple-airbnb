@@ -1,0 +1,18 @@
+
+<ul class="d-flex p-2 justify-content-center">
+  <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body bg-dark-subtle h-75">
+        <h3 class="card-title"><%= flat.name %></h3>
+        <p class="card-text"><%= flat.address %></p>
+        <div class="d-flex">
+          <p class="me-2"><i class="fa-solid fa-people-group"></i><%= flat.number_of_guests %></p>
+          <p><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></p>
+        </div>
+      </div>
+      <div class="card-body">
+        <%= link_to "More info", flat_path(flat), class: "card-link"%>
+      </div>
+    </div>
+  <% end %>
+</ul>
